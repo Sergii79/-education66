@@ -30,12 +30,41 @@ console.log("Hello, world!")
 // const value = 27.4;
 // console.log(Math.round(value));
 
+
+// АВТОПЕРЕВІРКИ
+
 // Change code below this line
-const pricePerDroid = 800;
-const orderedQuantity = 6;
-const deliveryFee = 50;
-const totalPrice = (pricePerDroid * orderedQuantity + deliveryFee);
-console.log(totalPrice);
-// const message = "You ordered droids worth " + totalPrice + " credits. Delivery ( " + deliveryFee + " credits) is included in total price.";
-const message = `You ordered droids worth ${totalPrice} credits. Delivery (${deliveryFee} credits) is included in total price.`;
-console.log(message);
+// const pricePerDroid = 800;
+// const orderedQuantity = 6;
+// const deliveryFee = 50;
+// const totalPrice = (pricePerDroid * orderedQuantity + deliveryFee);
+// const message = `You ordered droids worth ${totalPrice} credits. Delivery (${deliveryFee} credits) is included in total price.`;
+// console.log(message);
+
+
+// function add(a, b, c) {
+//   // Change code below this line
+// // console.log(return);
+// return a + b + c;
+
+//   // Change code above this line
+// }
+
+// add(2, 5, 8); // 15
+
+// console.log(add(15, 27, 10));
+// console.log(add(10, 20, 30));
+// console.log(add(5, 10, 15));
+
+
+function makeMessage(name, price) {
+  // Change code below this line
+ 
+console.log(`You picked ${name}, price per item is ${price} credits`);
+
+}
+
+console.log(makeMessage('Radar', 6150));
+console.log(makeMessage('Scanner', 3500));
+console.log(makeMessage('Reactor', 8000));
+console.log(makeMessage('Engine', 4070));
