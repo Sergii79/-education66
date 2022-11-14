@@ -57,14 +57,40 @@ console.log("Hello, world!")
 // console.log(add(5, 10, 15));
 
 
-function makeMessage(name, price) {
-  // Change code below this line
+// function makeMessage(name, price) {
+//   // Change code below this line
  
-console.log(`You picked ${name}, price per item is ${price} credits`);
+// console.log(`You picked ${name}, price per item is ${price} credits`);
 
+// }
+
+// console.log(makeMessage('Radar', 6150));
+// console.log(makeMessage('Scanner', 3500));
+// console.log(makeMessage('Reactor', 8000));
+// console.log(makeMessage('Engine', 4070));
+
+function makeTransaction(pricePerDroid, orderedQuantity, customerCredits) {
+  let message;
+  const totalPrice = pricePerDroid * orderedQuantity;
+  if (customerCredits > totalPrice) {
+    let message = 'Insufficient funds!'
+  }
+  else {
+    let message = 'You ordered 10 droids, you have 0 credits left'
+  }
+ // let totalPrice = pricePerDroid * orderedQuantity;
+  // Change code below this line
+
+  // Change code above this line
+  return message;
+  // return totalPrice;
+  console.log(totalPrice)
 }
+makeTransaction(5, 10, 100);
 
-console.log(makeMessage('Radar', 6150));
-console.log(makeMessage('Scanner', 3500));
-console.log(makeMessage('Reactor', 8000));
-console.log(makeMessage('Engine', 4070));
+
+
+const pricePerDroid = 5;
+const orderedQuantity = 10;
+const totalPrice = pricePerDroid * orderedQuantity;
+console.log(totalPrice);
