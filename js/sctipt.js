@@ -95,3 +95,13 @@ console.log("Hello, world!")
 // const totalPrice = pricePerDroid * orderedQuantity;
 // console.log(totalPrice);
 
+//-----------------------------------------------------
+// Виносимо варіанти в масив
+const redFruits = ["apple", "strawberry", "cherry", "cranberries"];
+const fruit = "cherry";
+// Перевіряємо присутність елемента
+const hasFruit = redFruits.includes(fruit);
+
+if (hasFruit) {
+  console.log(`${fruit} is a red fruit!`);
+}
