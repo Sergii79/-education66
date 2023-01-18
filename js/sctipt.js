@@ -51,7 +51,7 @@
 // }
 
 // add(2, 5, 8); // 15
-
+// console.log(add());
 // console.log(add(15, 27, 10));
 // console.log(add(10, 20, 30));
 // console.log(add(5, 10, 15));
@@ -199,23 +199,136 @@
 
 //-----------------------------------------------------
 
-//* Example 1 - Майстерня коштовностей
-// Напишіть метод calcTotalPrice(stoneName), який приймає назву каменю і розраховує та повертає загальну вартість каменів з таким ім'ям, ціною та кількістю з властивості stones.
+// //* Example 1 - Майстерня коштовностей
+// // Напишіть метод calcTotalPrice(stoneName), який приймає назву каменю і розраховує та повертає загальну вартість каменів з таким ім'ям, ціною та кількістю з властивості stones.
 
-const chopShop = {
-  stones: [
-    { name: "Emerald", price: 1300, quantity: 4 },
-    { name: "Diamond", price: 2700, quantity: 3 },
-    { name: "Sapphire", price: 1400, quantity: 7 },
-    { name: "Ruby", price: 800, quantity: 2 },
-  ],
-  calcTotalPrice(stoneName) {
-    const currentStone = this.stones.find((stone) => stoneName === stone.name);
-    return `Total ${stoneName}: ${currentStone.price * currentStone.quantity}`;
-  },
-};
+// const chopShop = {
+//   stones: [
+//     { name: "Emerald", price: 1300, quantity: 4 },
+//     { name: "Diamond", price: 2700, quantity: 3 },
+//     { name: "Sapphire", price: 1400, quantity: 7 },
+//     { name: "Ruby", price: 800, quantity: 2 },
+//   ],
+//   calcTotalPrice(stoneName) {
+//     const currentStone = this.stones.find((stone) => stoneName === stone.name);
+//     return `Total ${stoneName}: ${currentStone.price * currentStone.quantity}`;
+//   },
+// };
 
-console.log(chopShop.calcTotalPrice("Emerald")); // 5200
-console.log(chopShop.calcTotalPrice("Diamond")); // 8100
-console.log(chopShop.calcTotalPrice("Sapphire")); // 9800
-console.log(chopShop.calcTotalPrice("Ruby")); // 1600
+// console.log(chopShop.calcTotalPrice("Emerald")); // 5200
+// console.log(chopShop.calcTotalPrice("Diamond")); // 8100
+// console.log(chopShop.calcTotalPrice("Sapphire")); // 9800
+// console.log(chopShop.calcTotalPrice("Ruby")); // 1600
+
+//-----------------------------------------------------
+
+//* Example 3 - Калькулятор
+// Створіть об'єкт calculator з трьома методами:
+
+// read(a, b)- приймає два значення та зберігає їх як властивості об'єкта.
+// add() - повертає суму збережених значень.
+// mult() - перемножує збережені значення та повертає результат.
+
+// const calculator = {
+//   a: 0,
+//   b: 0,
+//   read(a, b) {
+//     this.a = a;
+//     this.b = b;
+//   },
+//   add() {
+//     return this.a + this.b;
+//   },
+
+
+//   add() {
+//     return this.a + this.b;
+//   },
+//   mult() {
+//     return this.a * this.b;
+//   },
+// };
+
+// calculator.read(3, 5);
+
+// console.log(calculator);
+// console.log(calculator.add());
+
+// console.log(calculator.add());
+// console.log(calculator.mult());
+
+//*-------------------------------------------------------
+
+// const baseSalary = 30000;
+// const overtime = 10;
+// const rate = 20;
+
+// const getWage = (baseSalary, overtime, rate) => {
+//   return baseSalary + overtime * rate;
+// };
+
+// getWage(baseSalary, overtime, rate);
+// console.log(getWage());
+// console.log(getWage(10, 10, 10));
+
+//*-------------------------------------------------------
+
+// const employee = {
+//   baseSalary: 30000,
+//   overtime: 10,
+//   rate: 20,
+
+//   read(baseSalary, overtime, rate) {
+//     this.baseSalary = baseSalary;
+//     this.overtime = overtime;
+//     this.rate = rate;
+//   },
+    
+//   getWage() {
+//     return this.baseSalary + this.overtime * this.rate;
+//   },
+// };
+
+// console.log(employee.getWage());
+
+// employee.read(10, 10, 10);
+
+// // employee.getWage(10, 10, 10);
+// console.log(employee.getWage());
+// // employee.getWage();
+
+//*-------------------------------------------------------
+
+// const animal = {
+//   legs: 4,
+// };
+// const dog = Object.create(animal);
+// dog.name = "Манго";
+
+// console.log(dog); // { name: 'Манго', __proto__: animal }
+// console.log(animal.isPrototypeOf(dog)); // true
+
+// console.log(dog.hasOwnProperty("name")); // true
+// console.log(dog.name); // 'Манго'
+
+// console.log(dog.hasOwnProperty("legs")); // false
+// console.log(dog.legs); // 4
+
+//*-------------------------------------------------------
+
+
+
+class User {
+  // Синтаксис оголошення методу класу
+  constructor(name, email) {
+    // Ініціалізація властивостей екземпляра
+    this.name = name;
+    this.email = email;
+  }
+}
+
+const mango = new User("Манго", "mango@mail.com");
+console.log(mango); // { name: 'Манго', email: 'mango@mail.com' }
+
+const poly = new User("Поли", "poly@mail.com");
+console.log(poly); // { name: 'Поли', email: 'poly@mail.com' }
