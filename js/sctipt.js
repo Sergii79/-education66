@@ -316,19 +316,101 @@
 
 //*-------------------------------------------------------
 
+// class User {
+//   // Синтаксис оголошення методу класу
+//   constructor(name, email) {
+//     // Ініціалізація властивостей екземпляра
+//     this.name = name;
+//     this.email = email;
+//   }
+// }
 
+// const mango = new User("Манго", "mango@mail.com");
+// console.log(mango); // { name: 'Манго', email: 'mango@mail.com' }
+
+// const poly = new User("Поли", "poly@mail.com");
+// console.log(poly); // { name: 'Поли', email: 'poly@mail.com' }
+
+//*-------------------------------------------------------
+
+// class User {
+//   static #takenEmails = [];
+
+//   static isEmailTaken(email) {
+//     return User.#takenEmails.includes(email);
+//   }
+
+//   #email;
+
+//   constructor({ email }) {
+//     this.#email = email;
+//     User.#takenEmails.push(email);
+//   }
+// }
+
+// const mango = new User({ email: "mango@mail.com" });
+
+// console.log(User.isEmailTaken("poly@mail.com"));
+// console.log(User.isEmailTaken("mango@mail.com"));
+
+//*-------------------------------------------------------
+
+// class User {
+//   // Оголошення та ініціалізація статичної властивості
+//   static Roles = {
+//     ADMIN: "admin",
+//     EDITOR: "editor",
+//   };
+
+//   #email;
+//   #role;
+
+//   constructor({ email, role }) {
+//     this.#email = email;
+//     this.#role = role;
+//   }
+
+//   get role() {
+//     return this.#role;
+//   }
+
+//   set role(newRole) {
+//     this.#role = newRole;
+//   }
+// }
+
+// const mango = new User({
+//   email: "mango@mail.com",
+//   role: User.Roles.ADMIN,
+// });
+
+// console.log(mango.Roles); // undefined
+// console.log(User.Roles); // { ADMIN: "admin", EDITOR: "editor" }
+
+// console.log(mango.role); // "admin"
+// mango.role = User.Roles.EDITOR;
+// console.log(mango.role); // "editor"
+
+//*-------------------------------------------------------
 
 class User {
-  // Синтаксис оголошення методу класу
-  constructor(name, email) {
-    // Ініціалізація властивостей екземпляра
-    this.name = name;
+  constructor(email) {
     this.email = email;
   }
+
+  get email() {
+    return this.email;
+  }
+
+  set email(newEmail) {
+    this.email = newEmail;
+  }
 }
+// Change code below this line
 
-const mango = new User("Манго", "mango@mail.com");
-console.log(mango); // { name: 'Манго', email: 'mango@mail.com' }
-
-const poly = new User("Поли", "poly@mail.com");
-console.log(poly); // { name: 'Поли', email: 'poly@mail.com' }
+class Admin extends User {
+  static AccessLevel = {
+    BASIC: "basic", SUPERUSER: "superuser"
+  }  
+};
+console.log(Admin);
