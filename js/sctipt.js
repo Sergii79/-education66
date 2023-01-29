@@ -43,8 +43,19 @@ const list = document.createElement("ul");
 // }
 // conteyner.append(list);
 
-const listContent = technologies
-    .map((technology) => `<li>${technology}</li>`)
-    .join(" ");
+// const listContent = technologies
+//     .map((technology) => `<li>${technology}</li>`)
+//     .join(" ");
 
-console.log(listContent);
+// // //    list.append(listContent);
+// list.insertAdjacentHTML("beforeend", listContent);
+// conteyner.append(list);
+
+// console.log(listContent);
+
+const listContent = technologies
+    .reduce(
+        (acc, technology) => (acc += `<li>${technology}</li>`), ""
+);
+list.insertAdjacentHTML("beforeend", listContent);
+conteyner.append(list);
