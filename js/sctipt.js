@@ -5,7 +5,7 @@
 
 // // console.log(list);
 
-// if (list) {    
+// if (list) {
 //     console.log(list.children);
 // }
 // else {
@@ -18,6 +18,8 @@
 //     1. Створити список технологій що вивчаються на курсі Fullstack за допомогою js
         
 //         ```jsx
+        const conteyner = document.getElementById("conteyner");
+        
         const technologies = ["HTML", "CSS", "JavaScript", "React", "Node"];
 //         ```
 //     Показати як че робиться через **map** та **reduce**
@@ -33,10 +35,16 @@
 
 const list = document.createElement("ul");
 
-for (const technology of technologies) {
-    const li = document.createElement("li");
-    console.log(technology);
-    li.textContent = technology;
-    list.append(li);
-}
-document.body.append(list);
+// for (const technology of technologies) {
+//     const li = document.createElement("li");
+//     console.log(technology);
+//     li.textContent = technology;
+//     list.append(li);
+// }
+// conteyner.append(list);
+
+const listContent = technologies
+    .map((technology) => `<li>${technology}</li>`)
+    .join(" ");
+
+console.log(listContent);
