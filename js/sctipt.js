@@ -12,11 +12,11 @@
 // Example 2 - Комбіновані оператори
 // Заміни вираз перевизначення комбінованим оператором +=.
 
-// let students = 100;
-// students -= 50;
-// students += 20;
-// students += 40;
-// console.log(students);
+let students = 100;
+students -= 50;
+students += 20;
+students += 40;
+console.log(students);
 
 // Example 3 - Пріоритет операторів
 // Розбери пріоритет операторів в інструкції привласнення значення змінної result.
@@ -415,3 +415,54 @@
 // };
 // console.log(Admin);
 
+const qwerty = "dhgdhchn";
+console.log(qwerty);
+
+function multiply() {
+  // Тіло функції
+  console.log("Це лог на момент виклику функції multiply");
+}
+
+const book = {
+  title: "The Last Kingdom",
+  author: "Bernard Cornwell",
+  genres: ["historical prose", "adventure"],
+  isPublic: true,
+  rating: 8.38,
+};
+
+const bookTitle = book.title;
+console.log(bookTitle); // 'The Last Kingdom'
+
+const bookGenres = book.genres;
+console.log(bookGenres); // ['historical prose', 'adventurs']
+
+const bookPrice = book.price;
+console.log(bookPrice); // undefined
+
+//* 1. Порахує і виведе в консоль кількість категорій в ul#categories, тобто елементів li.item.
+//* 2. Для кожного элемента li.item у списку ul#categories, знайде і виведе в консоль текст заголовку елемента (тегу <h2>) і кількість елементів в категорії (усіх <li>, вкладених в нього).
+
+/*
+    1. Створити контейнер для списку - тег ul
+    2. Створити цикл для перебoру елементів масиву
+    3. Створити тег li 
+    4. Записати текст з масиву у тег li
+    5. Помістити li всередину списку ul
+    6. Помістити список ul на сторінку
+*/
+
+/*
+    1. Створити константу для категорій  - li.item
+    2. Створити цикл для перебoру категорій
+    3. Створити тег li 
+    4. Записати текст з масиву у тег li
+    5. Помістити li всередину списку ul
+    6. Помістити список ul на сторінку
+*/
+
+const categories = document.querySelectorAll('.item');
+
+console.log('Number of categories:', categories.length);
+
+console.log(categories);
