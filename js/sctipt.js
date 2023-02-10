@@ -467,15 +467,44 @@
 
 // console.log(categories);
 
+
+//*-------------------------------------------------------
+
 const openModalBtn = document.getElementById("openModalBtn");
-const overlay = document.getElementById(".overlay");
-const closeBtn = document.getElementById(".closeBtn");
+const overlay = document.getElementById("overlay");
+const closeBtn = document.getElementById("closeBtn");
 const openClass = "open";
 
 console.log(openModalBtn);
 
-openModalBtn.addEventListener("click", handLeModal);
+openModalBtn.addEventListener("click", handleModalOpen);
+overlay.addEventListener("click", handleModalClose);
+closeBtn.addEventListener("click", handleModalClose);
 
-function handLeModal() {
-  console.log("hello");
+// function toggleModal() {
+//   document.body.classList.toggle(openClass);
+// }
+
+function handleModalOpen() {
+  document.body.classList.add(openClass);
 }
+
+function handleModalClose() {
+  document.body.classList.remove(openClass);
+}
+
+document.body.addEventListener("keydown", handleModalCloseOnESC);
+
+function handleModalCloseOnESC({ key }) {
+  if (key === "Escape") {
+    handleModalClose();
+  }
+}
+
+
+
+
+
+// function handLeModal() {
+//   console.log("hello");
+// }
